@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --size: 30;
+    --sizepx : calc(var(--size) * 1px);
+}
+
+.numbers-container {
+
+    display: grid;
+    grid-template-columns: repeat(10, var(--sizepx));
+    grid-template-rows: repeat(10, var(--sizepx));
+    place-content: center;
+    place-items: center;
+    gap: 5px;
+
+}
+
+.numbers-container > div {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight {
+    background-color: dodgerblue;
+}
+
+[data-selecao='0'] [data-multiplos=' 1 2 3 4 5 6 7 8 9 10 '],
+[data-selecao='1'] [data-multiplos*=' 1 '],
+[data-selecao='2'] [data-multiplos*=' 2 '],
+[data-selecao='3'] [data-multiplos*=' 3 '],
+[data-selecao='4'] [data-multiplos*=' 4 '],
+[data-selecao='5'] [data-multiplos*=' 5 '],
+[data-selecao='6'] [data-multiplos*=' 6 '],
+[data-selecao='7'] [data-multiplos*=' 7 '],
+[data-selecao='8'] [data-multiplos*=' 8 '],
+[data-selecao='9'] [data-multiplos*=' 9 '],
+[data-selecao='10'] [data-multiplos*=' 10 '] {
+    background-color: #99d8c9;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 600px;
+    gap: 1rem;
+}
